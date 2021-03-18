@@ -8,6 +8,7 @@
   --hero-background: rgba(47, 48, 58, 1);
   --team-background: rgba(245, 244, 250, 1);
   --border-bottom: #ececec;
+  --clients-svg: rgba(175, 177, 184, 1);
 }
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -102,7 +103,7 @@ img {
 .header-nav-link,
 .header-contact {
   display: block;
-  padding: 32px 0;
+  padding: 16px 0;
   color: var(--black-text);
 }
 .header-nav-link:hover,
@@ -144,6 +145,12 @@ img {
 }
 .header-contact {
   color: var(--grey-text);
+  display: flex;
+  align-items: center;
+}
+.mail-icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 .header-nav-list :not(:last-child),
 .header-contacts :not(:last-child) {
@@ -156,6 +163,19 @@ img {
 
 .hero {
   background-color: var(--hero-background);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/header_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--white-text);
   text-align: center;
   padding-top: 200px;
@@ -295,6 +315,12 @@ img {
   line-height: 1.2;
   /* margin-bottom: 30px; */
 }
+
+/*Клиенты*/
+/* .clients-svg {
+  fill: var(--clients-svg);
+} */
+
 /*ФУТЕР*/
 .footer {
   padding: 60px 0;
