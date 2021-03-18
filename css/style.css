@@ -9,6 +9,7 @@
   --team-background: rgba(245, 244, 250, 1);
   --border-bottom: #ececec;
   --clients-svg: rgba(175, 177, 184, 1);
+  --footer-bg-items: rgba(255, 255, 255, 0.1);
 }
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -409,24 +410,34 @@ img {
 }
 /*ФУТЕР*/
 .footer {
-  padding: 60px 0;
   background-color: var(--hero-background);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.main-footer {
+  margin-right: 70px;
 }
 
 .footer a {
   color: var(--white-text);
 }
 
-address {
-  color: var(--white-text);
+.address {
+  color: white;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
-.footer__contacts a {
+.contacts-foot a {
   color: var(--white-text-op60);
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -434,16 +445,55 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.footer__contacts a:hover,
-.footer__contacts a:focus {
+
+.contacts-foot li {
+  padding-top: 9px;
+}
+
+.contacts-foot a:hover,
+.contacts-foot a:focus {
   color: var(--blue-text);
 }
-.footer__contacts {
-  margin-top: 9px;
+
+.footer-contact-list {
+  display: flex;
 }
-.footer__item:not(:last-child) {
-  margin-bottom: 9px;
+
+.follow-us-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--white-text);
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
+
+.footer-contact-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-contact-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--white-text);
+  border-radius: 50%;
+  background-color: var(--footer-bg-items);
+}
+
+.footer-contact-svg {
+  fill: currentColor;
+}
+
+.footer-contact-link:hover,
+.footer-contact-link:focus {
+  background-color: var(--blue-text);
+}
+
 /*ПОРТФОЛИО*/
 .portfolio {
   background-color: white;
@@ -492,11 +542,6 @@ address {
 .active-btn {
   margin-bottom: 50px;
 }
-/* .container-cards {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-} */
 
 .card-set .item {
   flex-basis: calc(100% / 3 - 30px);
