@@ -518,7 +518,7 @@ img {
   justify-content: center;
 }
 
-.active-btn li {
+.active-btn li:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -574,6 +574,7 @@ img {
   padding-left: 24px;
   padding-bottom: 20px;
   padding-bottom: 20px;
+  padding-right: 20px;
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
